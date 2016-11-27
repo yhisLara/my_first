@@ -11,7 +11,51 @@
     tools:context="com.example.yhisl.my_first.MainActivity">
 
     <TextView
+        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hola Mundillo" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:id="@+id/textView2" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_marginTop="51dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:ems="10"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:id="@+id/editText2"
+        android:inputType="text" />
+
+    <Switch
+        android:text="Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2"
+        android:layout_marginEnd="13dp"
+        android:layout_marginTop="21dp"
+        android:id="@+id/switch1" />
+
+    <CheckBox
+        android:text="CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch1"
+        android:layout_alignEnd="@+id/switch1"
+        android:layout_marginTop="34dp"
+        android:id="@+id/checkBox" />
+
 </RelativeLayout>
