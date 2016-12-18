@@ -23,18 +23,17 @@
         android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/buttonMain"
         android:layout_marginTop="51dp"
         android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:onClick="metodoUno"/>
+        android:layout_centerHorizontal="true"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
         android:ems="10"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/buttonMain"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
         android:id="@+id/editText2"
