@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.github.johnpersano.supertoasts.library.Style;
@@ -19,5 +20,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
-
+    public void metodoUno(View vista){
+        int a = 4;
+        Toast.makeText(MainActivity.this , "Button Cliked" , Toast.LENGTH_LONG).show();
+    }
     }
