@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">my_first</string>
+    <string name="description">button </string>
+    <string name="twoButton">Siguiente</string>
+    <string name="Name"></string>
 </resources>
