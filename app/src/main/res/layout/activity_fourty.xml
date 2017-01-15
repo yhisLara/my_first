@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_fourty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.yhisl.my_first.FourtyActivity">
+
+    <Button
+        android:text="Siguiente"
+        android:textColor="@color/colorIcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/buttonNext2"
+        android:background="#2a7be4"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:layout_marginTop="84dp"
+        android:id="@+id/editTextMail"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_dialog_email"
+        android:id="@+id/imageButtonMail"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/editTextMail"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginTop="68dp"
+        android:id="@+id/editTextContact"
+        android:layout_marginStart="8dp"
+        android:layout_below="@+id/editTextMail"
+        android:layout_alignStart="@+id/editTextMail" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButtonContact"
+        android:layout_alignTop="@+id/editTextContact"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

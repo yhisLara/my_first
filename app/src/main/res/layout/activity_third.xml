@@ -43,14 +43,15 @@
         android:layout_alignStart="@+id/imageButtonPhone"
         android:contentDescription="@string/description"/>
 
-    <ImageButton
+    <Button
+        android:text="Siguiente"
+        android:textColor="@color/colorIcons"
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:src="@android:drawable/ic_menu_camera"
         android:background="#2a7be4"
-        android:id="@+id/imageButtonCamera"
+        android:id="@+id/buttonCamera"
         android:contentDescription="@string/description"/>
 
     <EditText
