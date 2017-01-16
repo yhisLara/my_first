@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //forzar icono en el actionbar
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_myicon);
+
         btn = (Button) findViewById(R.id.buttonMain);
         //casting para acceder a propiedades de un boton
         //ya que findViewById devuelve una vista y btn pide boton

@@ -19,6 +19,9 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        //flecha atrás
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         textView = (TextView) findViewById(R.id.textViewMain);
         buttonGoNext = (Button) findViewById(R.id.buttonGoNext);
         //tomar los datos del intent

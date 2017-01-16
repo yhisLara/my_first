@@ -60,4 +60,14 @@
         android:id="@+id/imageButtonContact"
         android:layout_alignTop="@+id/editTextContact"
         android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:id="@+id/imageButtonCamera"
+        android:background="@android:color/transparent"
+        android:layout_above="@+id/buttonNext2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="80dp" />
 </RelativeLayout>

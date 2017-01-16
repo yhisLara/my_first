@@ -1,5 +1,6 @@
 package com.example.yhisl.my_first;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -23,6 +25,8 @@ public class FourtyActivity extends AppCompatActivity {
     private TextView editTextContact;
     private ImageButton buttonMail;
     private ImageButton buttonContact;
+    private ImageButton buttonCamera;
+    private final int PICTURE_FROM_CAMERA = 50;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -34,10 +38,14 @@ public class FourtyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourty);
 
+        //flecha atrás
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         editTextMail = (EditText) findViewById(R.id.editTextMail);
         editTextContact = (EditText) findViewById(R.id.editTextContact);
         buttonContact = (ImageButton) findViewById(R.id.imageButtonContact);
         buttonMail = (ImageButton) findViewById(R.id.imageButtonMail);
+        buttonCamera = (ImageButton)findViewById(R.id.imageButtonCamera);
 
         //boton para agregar nuevo contacto
         buttonContact.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +69,7 @@ public class FourtyActivity extends AppCompatActivity {
                     //mail rapido
                     Intent intentMailTo = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" +email));
                     //mail completo
-                    Intent intentMail = new Intent(Intent.ACTION_VIEW, Uri.parse(email));
+                    Intent intentMail = new Intent(Intent.ACTION_SEND, Uri.parse(email));
                     //intentMail.setClassName("com.google.android.gm", "com.google.android.gm.ComposeActivityGmail");
                     intentMail.setType("plain/text");
                     intentMail.putExtra(Intent.EXTRA_SUBJECT, "Mail's title");
@@ -72,10 +80,38 @@ public class FourtyActivity extends AppCompatActivity {
             }
         });
 
+        //Boton para abrir camara
+
+        buttonCamera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentCamera = new Intent("android.media.action.IMAGE_CAPTURE");
+                startActivityForResult(intentCamera, PICTURE_FROM_CAMERA);
+            }
+        });
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        switch(requestCode){
+            case PICTURE_FROM_CAMERA:
+                if(resultCode == Activity.RESULT_OK){
+                    String result = data.toUri(0);
+                    Toast.makeText(this, "Result:" +result, Toast.LENGTH_LONG).show();
+
+                }
+                else{
+                    Toast.makeText(this, "There was an error with the picture, try again", Toast.LENGTH_LONG).show();
+                }
+                break;
+            default:
+                super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 
     /**
