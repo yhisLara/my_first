@@ -17,6 +17,7 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import static java.util.logging.Level.FINE;
 import static java.util.logging.Level.parse;
 
 public class FourtyActivity extends AppCompatActivity {
@@ -26,6 +27,7 @@ public class FourtyActivity extends AppCompatActivity {
     private ImageButton buttonMail;
     private ImageButton buttonContact;
     private ImageButton buttonCamera;
+    private Button buttonNext2;
     private final int PICTURE_FROM_CAMERA = 50;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -46,6 +48,7 @@ public class FourtyActivity extends AppCompatActivity {
         buttonContact = (ImageButton) findViewById(R.id.imageButtonContact);
         buttonMail = (ImageButton) findViewById(R.id.imageButtonMail);
         buttonCamera = (ImageButton)findViewById(R.id.imageButtonCamera);
+        buttonNext2 = (Button) findViewById(R.id.buttonNext2);
 
         //boton para agregar nuevo contacto
         buttonContact.setOnClickListener(new View.OnClickListener() {
@@ -93,6 +96,14 @@ public class FourtyActivity extends AppCompatActivity {
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
+        buttonNext2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentNext2 = new Intent(FourtyActivity.this, FifthActivity.class);
+                startActivity(intentNext2);
+            }
+        });
     }
 
     @Override
