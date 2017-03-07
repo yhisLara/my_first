@@ -4,7 +4,7 @@
     android:id="@+id/activity_fifth"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.yhisl.my_first.FifthActivity">
+    tools:context="com.example.yhisl.my_first.ListActivity">
 
     <ListView
         android:id="@+id/listViewOne"

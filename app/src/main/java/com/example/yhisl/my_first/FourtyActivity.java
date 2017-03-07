@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,9 +17,6 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
-
-import static java.util.logging.Level.FINE;
-import static java.util.logging.Level.parse;
 
 public class FourtyActivity extends AppCompatActivity {
 
@@ -100,7 +98,7 @@ public class FourtyActivity extends AppCompatActivity {
         buttonNext2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentNext2 = new Intent(FourtyActivity.this, FifthActivity.class);
+                Intent intentNext2 = new Intent(FourtyActivity.this, GridViewActivity.class);
                 startActivity(intentNext2);
             }
         });
