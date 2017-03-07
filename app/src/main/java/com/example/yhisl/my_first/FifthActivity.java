@@ -29,13 +29,20 @@ public class FifthActivity extends AppCompatActivity {
         names.add("Neil");
         names.add("Kelin");
         names.add("nikel");
-
+        names.add("Klein");
+        names.add("Neil");
+        names.add("Kelin");
+        names.add("nikel");
+        names.add("Klein");
+        names.add("Neil");
+        names.add("Kelin");
+        names.add("nikel");
 
         //Adaptador, la forma visual de mostrar los datos
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names);
+        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names);
 
         //enlazar adaptador con el listView
-        listViewOne.setAdapter(adapter);
+        //listViewOne.setAdapter(adapter);
 
         listViewOne.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
